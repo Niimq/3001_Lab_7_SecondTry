@@ -6,6 +6,7 @@
 
 #include "ActionState.h"
 #include "NavigationObject.h"
+#include "Obstacle.h"
 
 class Agent : public NavigationObject
 {
@@ -54,6 +55,16 @@ public:
 	void UpdateWhiskers(float angle);
 
 	void SetActionState(ActionState state);
+
+	// New for lab 7 pat 2
+	// Utility function
+	bool CheckAgentLOSToTarget(Agent* agent, DisplayObject* target_object, std::vector<Obstacle*>& obstacles);
+	// virtual functions
+	virtual void Attack (){}
+	virtual void MoveToLOS() {}
+	virtual void MoveToPlayer() {}
+	virtual void MoveToRange() {}
+	virtual void patrol() {}
 
 private:
 	void ChangeDirection(); // From scalar to vec2.
