@@ -201,6 +201,12 @@
     <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\CloseCombatEnemy.cpp">
       <Filter>Decision\Agents</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\MoveToRangeAction.cpp">
+      <Filter>Decision\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatCondition.cpp">
+      <Filter>Decision\Conditions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StartScene.h">
@@ -427,6 +433,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\CloseCombatEnemy.h">
       <Filter>Decision\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\MoveToRangeAction.h">
+      <Filter>Decision\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatCondition.h">
+      <Filter>Decision\Conditions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
