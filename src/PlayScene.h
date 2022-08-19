@@ -8,8 +8,10 @@
 #include "PathNode.h"
 #include "Target.h"
 #include "LOSMode.h"
-#include "CloseCombatEnemy.h"
-#include "../../../AI 3001 second Half/Lab 7.1 Starter/src/CloseCombatEnemy.h"
+//#include "CloseCombatEnemy.h"
+#include "RangedCombatCondition.h"
+//#include "../../../AI 3001 second Half/Lab 7.1 Starter/src/CloseCombatEnemy.h"
+#include "../../../AI 3001 second Half/Lab 7.1 Starter/src/RangedCombatEnemy.h"
 
 
 class PlayScene : public Scene

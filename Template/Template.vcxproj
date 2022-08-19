@@ -159,6 +159,7 @@
     <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\CloseCombatEnemy.cpp" />
     <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\MoveToRangeAction.cpp" />
     <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatCondition.cpp" />
+    <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatEnemy.cpp" />
     <ClCompile Include="..\include\IMGUI\imgui.cpp" />
     <ClCompile Include="..\include\IMGUI\imgui_demo.cpp" />
     <ClCompile Include="..\include\IMGUI\imgui_draw.cpp" />
@@ -212,6 +213,7 @@
     <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\CloseCombatEnemy.h" />
     <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\MoveToRangeAction.h" />
     <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatCondition.h" />
+    <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatEnemy.h" />
     <ClInclude Include="..\include\IMGUI\imconfig.h" />
     <ClInclude Include="..\include\IMGUI\imgui.h" />
     <ClInclude Include="..\include\IMGUI\imgui_internal.h" />

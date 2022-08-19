@@ -207,6 +207,9 @@
     <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatCondition.cpp">
       <Filter>Decision\Conditions</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatEnemy.cpp">
+      <Filter>Decision\Agents</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StartScene.h">
@@ -439,6 +442,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatCondition.h">
       <Filter>Decision\Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AI 3001 second Half\Lab 7.1 Starter\src\RangedCombatEnemy.h">
+      <Filter>Decision\Agents</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
