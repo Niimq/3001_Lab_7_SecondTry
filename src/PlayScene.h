@@ -6,9 +6,10 @@
 #include "Obstacle.h"
 #include "Scene.h"
 #include "PathNode.h"
-#include "Starship.h"
 #include "Target.h"
 #include "LOSMode.h"
+#include "CloseCombatEnemy.h"
+#include "../../../AI 3001 second Half/Lab 7.1 Starter/src/CloseCombatEnemy.h"
 
 
 class PlayScene : public Scene
@@ -40,7 +41,8 @@ private:
 	// Game Objects
 	Background* m_pBackground;
 	Target* m_pTarget;
-	Starship* m_pStarship;
+	// New for Lab 7
+	CloseCombatEnemy* m_pStarship;
 	std::vector<Obstacle*> m_pObstacles;
 
 	void BuildObstaclePool();

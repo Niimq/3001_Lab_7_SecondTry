@@ -1,4 +1,5 @@
 #include "PatrolAction.h"
+#include "ActionNode.h"
 
 #include <iostream>
 
@@ -17,4 +18,5 @@ void PatrolAction::Action()
 		std::cout << "Performing " << m_name << std::endl;
 		GetAgent()->SetActionState(ActionState::PATROL);
 	}
+	GetAgent()->patrol();
 }
