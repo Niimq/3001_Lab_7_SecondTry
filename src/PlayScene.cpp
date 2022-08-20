@@ -34,6 +34,10 @@ void PlayScene::Draw()
 			auto offset = glm::vec2(obstacle->GetWidth() * 0.5f, obstacle->GetHeight() * 0.5f);
 			Util::DrawRect(obstacle->GetTransform()->position - offset, obstacle->GetWidth(), obstacle->GetHeight());
 		}
+
+		//Radius
+		auto detected = m_pStarship->GetTree()->GetPlayerDetectedNode()->GetDetected();
+		Util::DrawCircle(m_pStarship->GetTransform()->position, 300.0f, detected ? glm::vec4(0, 1 ,1 ,0 ) : glm::vec4(1, 0, 0, 1 ));
 	}
 
 	SDL_SetRenderDrawColor(Renderer::Instance().GetRenderer(), 255, 255, 255, 255);
