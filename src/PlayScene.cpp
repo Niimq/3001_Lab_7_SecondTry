@@ -43,9 +43,18 @@ void PlayScene::Update()
 {
 	UpdateDisplayList();
 	
+	// Sets up Ranged Combat Enemy
+	m_pStarship->GetTree()->GetEnemyHealthNode()->SetHealth(m_pStarship->GetHealth() > 25);
+	m_pStarship->GetTree()->GetEnemyHitNode()->SetIsHit(false);
+
+	// Distance Check Between StarShip and Target for Detection 
+	float distance = Util::Distance(m_pStarship->GetTransform()->position, m_pTarget->GetTransform()->position);
 	
-	
-	m_pStarship->CheckAgentLOSToTarget(m_pStarship, m_pTarget, m_pObstacles);
+	// Radius detection...just outside of LOS range (around 450 px)
+	m_pStarship->GetTree()->GetPlayerDetectedNode()->SetDetected(distance < 450);
+
+	// Within LOS distance...but not too close (optium firing range)
+	m_pStarship->GetTree()->GetRangedCombatNode()->SetIsWithinCombatRange(distance >= 200 && distance <= 350);
 
 	switch(m_LOSMode)
 	{
@@ -176,6 +185,21 @@ void PlayScene::GetKeyboardInput()
 	if (EventManager::Instance().IsKeyDown(SDL_SCANCODE_2))
 	{
 		Game::Instance().ChangeSceneState(SceneState::END);
+	}
+
+	if (EventManager::Instance().KeyPressed(SDL_SCANCODE_K))
+	{
+		m_pStarship->TakeDamage(25); // StarShip takes damage
+		std::cout << "StarShip atL " << m_pStarship->GetHealth() << "%. " << std::endl;
+	}
+
+	if (EventManager::Instance().KeyPressed(SDL_SCANCODE_R))
+	{
+		m_pStarship->SetHealth(100); // Reset health
+		m_pStarship->GetTree()->GetEnemyHitNode()->SetIsHit(false);
+		m_pStarship->GetTree()->GetPlayerDetectedNode()->SetDetected(false);
+
+		std::cout << "Conditions have been Reset" << std::endl;
 	}
 }
 
