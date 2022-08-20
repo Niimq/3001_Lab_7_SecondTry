@@ -9,6 +9,9 @@
 #include "TreeNode.h"
 #include "TreeNodeType.h"
 #include "RangedCombatCondition.h"
+#include "EnemyHealthCondition.h"
+#include "EnemyHitCondition.h"
+#include "PlayerDetectedCondition.h"
 
 #include <vector>
 #include "../../../AI 3001 second Half/Lab 7.1 Starter/src/RangedCombatCondition.h"
@@ -33,11 +36,21 @@ public:
 	RangedCombatCondition* GetRangedCombatNode() const;
 	std::vector<TreeNode*>& GetTree();
 
+	// New for ab 7 part 3
+	EnemyHealthCondition* GetEnemyHealthNode() const;
+	EnemyHitCondition* GetEnemyHitNode() const;
+	PlayerDetectedCondition* GetPlayerDetectionNode() const;
+
 	// New for Lab 7 part 2
 	void SetLOSNode(LOSCondition* node);
 	void SetRadiusNode(RadiusCondition* node);
 	void SetCloseCombatNode(CloseCombatCondition* node);
 	void SetRangedCombatNode(RangedCombatCondition* node);
+
+	// New for ab 7 part 3
+	void SetEnemyHealthNode(EnemyHealthCondition* node);
+	void SetEnemyHithNode(EnemyHitCondition* node);
+	void setPlayerDetectedNode(PlayerDetectedCondition* node);
 
 	// Public Utility / Convenience Methods
 	TreeNode* AddNode(TreeNode* parent, TreeNode* child_node, TreeNodeType type);
@@ -55,6 +68,10 @@ private:
 	CloseCombatCondition* m_CloseCombatNode{};
 	// new for Lab 7 part 2
 	RangedCombatCondition* m_RangedCombatNode{};
+	// New for Lab 7 part 3
+	EnemyHealthCondition* m_EnemyHealthNode{};
+	EnemyHitCondition* m_EnemyHithNode{};
+	PlayerDetectedCondition* m_playerDetectedNode{};
 
 	// TreeNode List
 	std::vector<TreeNode*> m_treeNodeList;
