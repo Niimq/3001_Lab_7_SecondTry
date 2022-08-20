@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-MoveToLOSAction::MoveToLOSAction()
+MoveToLOSAction::MoveToLOSAction(Agent* agent)
+	:ActionNode(agent)
 {
 	m_name = "Move To LOS Action";
 }

@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-WaitBehindCoverAction::WaitBehindCoverAction()
+WaitBehindCoverAction::WaitBehindCoverAction(Agent* agent)
+	:ActionNode(agent)
 {
 	m_name = "Wait Behind Cover Action";
 }

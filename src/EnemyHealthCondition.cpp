@@ -1,8 +1,9 @@
 #include "EnemyHealthCondition.h"
 
-EnemyHealthCondition::EnemyHealthCondition(const bool healthy)
+EnemyHealthCondition::EnemyHealthCondition(Agent* agent, const bool healthy)
+	:ConditionNode(agent)
 {
-	m_name = "Radius Condition";
+	m_name = "EnemyHealthCondition Condition";
 	SetHealth(healthy);
 }
 

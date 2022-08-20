@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-MoveToPlayerAction::MoveToPlayerAction()
+MoveToPlayerAction::MoveToPlayerAction(Agent* agent)
+	:ActionNode(agent)
 {
 	m_name = "Move To Player Action";
 }

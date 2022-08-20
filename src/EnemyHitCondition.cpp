@@ -1,6 +1,7 @@
 #include "EnemyHitCondition.h"
 
-EnemyHitCondition::EnemyHitCondition(const bool hit)
+EnemyHitCondition::EnemyHitCondition(Agent* agent, const bool hit)
+	:ConditionNode(agent)
 {
 	m_name = "Enemy hit Condition";
 	SetIsHit(hit);
