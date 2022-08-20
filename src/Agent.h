@@ -36,6 +36,11 @@ public:
 
 	ActionState GetActionState() const;
 
+	// new for lab 7 part 3
+	int GetHealth() const;
+	void SetHealth(const int value);
+	void TakeDamage(const int value);
+
 	// setters
 	void SetTargetPosition(glm::vec2 new_position);
 	void SetCurrentDirection(glm::vec2 new_direction);
@@ -92,6 +97,9 @@ private:
 
 	// action state
 	ActionState m_state;
+
+	// New for Lab 7 part 3
+	int m_health = 100;
 };
 
 
